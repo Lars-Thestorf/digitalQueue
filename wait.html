@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/script.js"></script>
+		<script src="js/api.js"></script>
+        <meta charset="UTF-8">
+        <title>Digitale Warteschlange</title>
+    </head>
+    <body onload="init()">
+        <div id="main">
+            <div class="Block" >
+                <h2>Deine Nummer(n):</h2>
+                <button onClick="leftNumber()" class="numButton" style="visibility: hidden;" id="leftNumber" >&lt;</button>
+                <div class="number" style="display: inline-block;" id="YourPos">42</div>
+                <button onClick="rightNumber()" class="numButton" style="visibility: hidden;" id="rightNumber">></button>
+            </div>
+            <div class="Block">
+                <h2>Aktuelle Nummer:</h2>
+                <div class="number" id="CurrentPos">40</div>
+                <p>Es sind aktuell <div id="vordir">2</div> Nummern vor dir</p>
+            </div>
+            <div class="Block">
+                <h2>Gruppengröße</h2>
+                <button onClick="removePerson()" class="numButton" id="removePerson" disabled>-</button>
+                <div id="groupSize">1</div>
+                <button onClick="addPerson()"  class="numButton" id="addPerson">+</button>
+            </div>
+            <div class="Block">
+                <button class="newNumberButton" onclick="newNumber()">Weitere Nummer ziehen</button>
+                <button class="leaveButton" onclick="leave()">Warteschlange verlassen</button>
+            </div>
+            <div id="modal">
+                <div id="leaveModal" >
+                    <p>Möchten Sie die Warteschlange wirklich verlassen?</p>
+                    <button class="dialogButton" style="background-color: red;"  onclick="confirmLeave()">Ja</button>
+                    <button class="dialogButton" onclick="closeModal()">Nein</button>
+                </div>
+            </div>
+        </div>
+        <div id="leftQueue" style="display: none;">
+            <div class="Block" >
+                <h2>Du hast die Warteschlange erfolgreich verlassen!</h2>
+            </div>
+        </div>
+        <div id="noQueue" style="display: none;">
+            <div class="Block" >
+                <h2>Es wurde keine Warteschlange ausgewählt!</h2>
+            </div>
+        </div>
+        <div id="queueClosed" style="display: none;">
+            <div class="Block" >
+                <h2>Diese Warteschlange wurde geschlossen!</h2>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+.Block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3em;
+}
+.number{
+    font-size: 5em;
+}
+#vordir{
+    display: inline;
+}
+#groupSize{
+    display: inline;
+    font-size: 2em;
+}
+.numButton{
+    border-radius: 2em;
+    width: 1em;
+    height: 1em;
+	line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    display: inline-block;
+    background-color: darkcyan;
+    border: none;
+    color: black;
+}
+.numButton:disabled {
+	background-color: lightgray;
+}
+.leaveButton{
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 1em;
+	border-radius: 2em;
+    height: 2em;
+	line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    background-color: red;
+    border: none;
+    color: black;
+}
+.newNumberButton{
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 1em;
+	border-radius: 2em;
+    height: 2em;
+	line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    background-color: darkcyan;
+    border: none;
+    color: black;
+}
+
+#modal{
+    background:rgba(0,0,0,0.5);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    display: none;
+}
+#leaveModal{
+    margin-top: 20%;
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 100%;
+    text-align: center;
+    width: 80%;
+    font-size: 3em;
+    background:rgba(255,255,255,1);
+}
+.dialogButton{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+	border-radius: 2em;
+    height: 2em;
+    width: 4em;
+	line-height: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    background-color: darkcyan;
+    border: none;
+    color: black;
+}
+.textField {
+	height: 2em;
+	line-height: 0;
+	font-size: 1em;
+}
+label{
+	text-align: left;
+}

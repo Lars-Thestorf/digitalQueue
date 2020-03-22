@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/admin.js"></script>
+		<script src="js/api.js"></script>
+        <meta charset="UTF-8">
+        <title>Digitale Warteschlange</title>
+    </head>
+	<body>
+        <div id="login">
+            <div class="Block">
+                <h2>Login</h2>
+                <label>Warteschlangen-Name<label><br>
+                <input id="name" class="textField" type=text name="name"></input><br>
+                <label>Passwort<label><br>
+                <input id="pass" class="textField" type=password name="pass"></input><br>
+                <button class="leaveButton" onclick="loginClick()">Einloggen</button><br>
+            </div>
+            <div class="Block">
+                <a href="#" onClick="showNewQueue()">Warteschlange anlegen</a>
+            </div>
+        </div>
+        <div id="adminInterface" style="display: none;">
+            <div class="Block">
+                <h2>Personen einlassen</h2>
+                <button onClick="decrease()" class="numButton" id="decrease" disabled>-</button>
+                <div id="groupSize">1</div>
+                <button onClick="increase()" class="numButton" id="increase">+</button>
+            </div>
+            <div class="Block">
+                <button onclick="admitClick()" class="newNumberButton">Einlassen</button>
+            </div>
+            <div class="Block">
+                <h2>Aktuelle Nummer:</h2>
+                <div class="number" id="CurrentPos">40</div>
+            </div>
+            <div class="Block">
+                <h2>Es warten:</h2>
+                <div class="number" id="CurrentWaiting">5</div>
+            </div>
+            <div class="Block">
+                <a href="#" id="qrLink" target="_blank">QR-Code zum Anstellen</a>
+            </div>
+            <div class="Block">
+                <button onclick="closeClick()" class="leaveButton">Warteschlange schließen</button>
+            </div>
+            <div id="modal">
+                <div id="leaveModal" >
+                    <p>Möchten Sie die Warteschlange wirklich schließen?</p>
+                    <button class="dialogButton" style="background-color: red;"  onclick="confirmClose()">Ja</button>
+                    <button class="dialogButton" onclick="closeModal()">Nein</button>
+                </div>
+            </div>
+        </div>
+        <div id="newQueue" style="display: none;">
+            <div class="Block">
+                <h2>Warteschlange erstellen</h2>
+                <label>Warteschlangen-Name<label><br>
+                <input id="name2" class="textField" type=text name="name2"></input><br>
+                <label>Admin-Passwort<label><br>
+                <input id="pass2" class="textField" type=password name="pass2"></input><br>
+                <button class="leaveButton" onclick="createClick()">Erstellen</button><br>
+            </div>
+            <div class="Block">
+                <a href="#" onClick="showLogin()">zurück zum Login</a>
+            </div>
+        </div>
+	</body>
+</html>

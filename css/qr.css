@@ -1,0 +1,14 @@
+@media print{
+    body{
+        width: 210mm;
+        height: 297mm;
+        font-size: 24pt;
+    }
+    img{
+        margin-right: auto;
+        margin-left: auto;
+        width: 10cm;
+        height: 10cm;
+        display: block;
+    }
+}
